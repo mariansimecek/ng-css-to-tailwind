@@ -23,9 +23,10 @@ Running `ng build` will create file **dist/styles.css**
 
 ### Use tool
 
-Print changes into stdout
+Print changes into stdout\
 `ng-css-to-tailwind analyze analyze <file>`
-Write changes to a file
+
+Write changes to a file\
 `ng-css-to-tailwind analyze analyze <file> --write`
 
 #### Flags

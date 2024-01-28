@@ -1,25 +1,44 @@
 {
   "name": "ng-css-to-tailwind",
   "version": "0.0.1",
-  "description": "",
+  "description": "CLI tool that help migrate from any Angular CSS solution to Tailwind",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bun run build.mjs"
   },
   "bin": {
     "ng-css-to-tailwind": "./index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bun",
+    "angular",
+    "tailwindcss",
+    "css",
+    "angular-tailwindcss",
+    "angular-tailwind",
+    "angular-css-to-tailwindcss",
+    "angular-css-to-tailwind"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mariansimecek/ng-css-to-tailwind#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariansimecek/ng-css-to-tailwind.git"
+  },
+  "bugs": "https://github.com/mariansimecek/ng-css-to-tailwind/issues",
+  "author": "Marian Simecek <mariansimcek@gmail.com>",
   "dependencies": {
     "angular-html-parser": "^5.2.0",
-    "bun-types": "^1.0.25",
     "css-to-tailwindcss": "^1.0.5",
     "require-from-string": "^2.0.2",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "bun-types": "^1.0.25",
     "typescript": "^5.3.3",
     "@types/bun": "^1.0.4",
     "@types/yargs": "^17.0.32"

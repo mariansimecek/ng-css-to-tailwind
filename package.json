@@ -8,7 +8,7 @@
     "build": "bun run build.mjs"
   },
   "bin": {
-    "ng-css-to-tailwind": "./index.ts"
+    "ng-css-to-tailwind": "./dist/index.js"
   },
   "files": [
     "dist"

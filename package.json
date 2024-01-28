@@ -1,0 +1,27 @@
+{
+  "name": "ng-css-to-tailwind",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ng-css-to-tailwind": "./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-html-parser": "^5.2.0",
+    "bun-types": "^1.0.25",
+    "css-to-tailwindcss": "^1.0.5",
+    "require-from-string": "^2.0.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/bun": "^1.0.4",
+    "@types/yargs": "^17.0.32"
+  }
+}

@@ -3,6 +3,7 @@ import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { parse } from "angular-html-parser";
 import { ParseTreeResult } from "angular-html-parser/lib/compiler/src/ml_parser/parser";
+import globToRegExp from "glob-to-regexp";
 
 yargs(hideBin(process.argv))
   .command(
@@ -77,8 +78,9 @@ yargs(hideBin(process.argv))
         if (!argv.class_blacklist || argv.class_blacklist.length === 0) {
           return false;
         }
-        for (const blackList of argv.class_blacklist) {
-          if (c === blackList) {
+        for (const black_item of argv.class_blacklist) {
+          const regex = globToRegExp(`${black_item}`);
+          if (c === black_item || regex.test(c)) {
             return true;
           }
         }
@@ -153,7 +155,13 @@ function parseHtmlFile(file: string) {
 function printResult(result: Map<string, string[]>) {
   result.forEach((tailwindClasses, html_class) => {
     console.log("\nclass:", html_class);
-    console.log("\x1b[36m%s\x1b[0m", "tailwind:", tailwindClasses.join(" "));
+    console.log(
+      "\x1b[36m%s\x1b[0m",
+      "tailwind:",
+      tailwindClasses.length > 0
+        ? tailwindClasses.join(" ")
+        : "\x1b[31m No tailwind equivalent found\x1b[0m",
+    );
   });
 }
 
@@ -220,6 +228,8 @@ function replaceClassesInFile(
 ) {
   let newFile = `${html_content}`;
   result.forEach((tailwindClasses, html_class) => {
+    if (tailwindClasses.length === 0) return;
+
     let tailwindClassesString = tailwindClasses.join(" ");
     tailwindClassesString = tailwindClassesString.replace(/"/g, "'");
 

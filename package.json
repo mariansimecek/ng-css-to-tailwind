@@ -34,13 +34,15 @@
   "dependencies": {
     "angular-html-parser": "^5.2.0",
     "css-to-tailwindcss": "^1.0.5",
+    "glob-to-regexp": "^0.4.1",
     "require-from-string": "^2.0.2",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "bun-types": "^1.0.25",
-    "typescript": "^5.3.3",
     "@types/bun": "^1.0.4",
-    "@types/yargs": "^17.0.32"
+    "@types/glob-to-regexp": "^0.4.4",
+    "@types/yargs": "^17.0.32",
+    "bun-types": "^1.0.25",
+    "typescript": "^5.3.3"
   }
 }

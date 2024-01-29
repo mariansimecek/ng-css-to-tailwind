@@ -1,4 +1,4 @@
-# ng-css-to-tailwind
+# ng-css-to-tailwind (experiment)
 
 A tool that helps migrate your Angular project from any CSS solution to Tailwind.
 
@@ -21,7 +21,7 @@ Running `ng build` will create file **dist/styles.css**
 /* @tailwind utilities; */
 ```
 
-### Use tool
+### 3. Use tool
 
 Print changes into stdout\
 `ng-css-to-tailwind analyze <file>`
@@ -31,11 +31,11 @@ Write changes to a file\
 
 #### Flags
 
-| Flag            | Description                      | Defaults           |
-| --------------- | -------------------------------- | ------------------ |
-| help            | Print help                       |                    |
-| version         | Print version                    |                    |
-| css_file        | Location of css file             | dist/styles.css    |
-| tailwind_file   | Location of tailwind config file | tailwind.config.js |
-| write           | Write changes to file            | false              |
-| class_blacklist | List of classes to ignore        | []                 |
+| Flag            | Description                             | Defaults           |
+| --------------- | --------------------------------------- | ------------------ |
+| help            | Print help                              |                    |
+| version         | Print version                           |                    |
+| css_file        | Location of css file                    | dist/styles.css    |
+| tailwind_file   | Location of tailwind config file        | tailwind.config.js |
+| write           | Write changes to file                   | false              |
+|gclass_blacklist | List of classes to ignore, support glob | []                 |

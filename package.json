@@ -1,6 +1,6 @@
 {
   "name": "ng-css-to-tailwind",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI tool that help migrate from any Angular CSS solution to Tailwind",
   "main": "dist/index.js",
   "scripts": {

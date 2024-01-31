@@ -13,7 +13,8 @@ It scans your CSS classes in an HTML file, finds CSS definitions, and converts t
 ```css
 .btn {
   padding: 1rem 2rem;
-  border-right: 1rem;
+  border-radius: 1rem;
+  border: 2px solid black;
 }
 
 .btn-primary {
@@ -24,7 +25,9 @@ It scans your CSS classes in an HTML file, finds CSS definitions, and converts t
 
 ```html
 <!-- output html -->
-<button class="px-8 py-4 border-r-[1rem] [background:#0f0ff0] text-[white]">
+<button
+  class="px-8 py-4 rounded-2xl border-2 border-solid border-[black] [background:#0f0ff0] text-[white]"
+>
   Click me!
 </button>
 ```
